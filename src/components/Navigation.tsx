@@ -1,6 +1,13 @@
+"use client";
+import { usePathname } from 'next/navigation';
+
 import Image from "next/image";
+import Link from 'next/link';
 
 const Navigation = () => {
+
+    const currentRoute = usePathname();
+
     return (
         <section className="fixed top-10 pl-14 w-full flex flex-row justify-between items-center text-white">
         {/* <div className=""> */}
@@ -9,12 +16,35 @@ const Navigation = () => {
         {/* <div className=" border-b-2 border-white"> */}
             <hr className="relative ml-4 left-10 z-10 w-[50%]" />
         {/* </div> */}
-        <div className=" bg-slate-700/20 backdrop-blur-xl py-8 w-[85%]">
+        <div className=" bg-slate-700/20 backdrop-blur-xl  w-[85%]">
             <ul className="flex flex-row justify-evenly pl-12 pr-32">
-                <li><span>00</span> Home</li>
-                <li><span>01</span> Destination</li>
-                <li><span>02</span> Crew</li>
-                <li><span>03</span> Technology</li>
+                <Link href="/" 
+                    className={`py-8 font-light uppercase ${currentRoute === "/" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>00</span> Home
+                </Link>
+
+                <Link href="/destination" 
+                    className={`py-8 font-light uppercase ${currentRoute === "/destination" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>01</span> Destination
+                </Link>
+
+                <Link href="/crew" 
+                    className={`py-8 font-light uppercase ${currentRoute === "/crew" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>02</span> Crew
+                </Link>
+
+                <Link href="/technology" 
+                    className={`py-8 font-light uppercase ${currentRoute === "/technology" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>03</span> Technology
+                </Link>
             </ul>
         </div>
         </section>

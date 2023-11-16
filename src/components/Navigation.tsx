@@ -1,6 +1,6 @@
 "use client";
 import { usePathname } from 'next/navigation';
-
+import { barlowCond } from '@/fonts/fonts';
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ const Navigation = () => {
     const currentRoute = usePathname();
 
     return (
-        <section className="fixed top-10 pl-14 w-full flex flex-row justify-between items-center text-white">
+        <section className={`fixed top-10 pl-14 w-full flex flex-row justify-between items-center text-white text-xl ${barlowCond.className}`}>
         {/* <div className=""> */}
             <Image src="./assets/shared/logo.svg" alt="logo" width={80} height={40} />
         {/* </div> */}
@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className=" bg-slate-700/20 backdrop-blur-xl  w-[85%]">
             <ul className="flex flex-row justify-evenly pl-12 pr-32">
                 <Link href="/" 
-                    className={`py-8 font-light uppercase ${currentRoute === "/" 
+                    className={`py-8 uppercase ${currentRoute === "/" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>00</span> Home

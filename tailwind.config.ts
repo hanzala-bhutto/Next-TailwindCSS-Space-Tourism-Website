@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        spaceBlue: '#D2D8F9'
+      },
       backgroundImage: {
         'home': "url('/assets/home/background-home-desktop.jpg')",
       },

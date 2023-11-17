@@ -19,28 +19,28 @@ const Navigation = () => {
         <div className=" bg-slate-700/20 backdrop-blur-xl  w-[85%]">
             <ul className="flex flex-row justify-evenly pl-12 pr-32">
                 <Link href="/" 
-                    className={`py-8 uppercase ${currentRoute === "/" 
+                    className={`py-8 uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>00</span> Home
                 </Link>
 
                 <Link href="/destination" 
-                    className={`py-8 font-light uppercase ${currentRoute === "/destination" 
+                    className={`py-8 font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/destination" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>01</span> Destination
                 </Link>
 
                 <Link href="/crew" 
-                    className={`py-8 font-light uppercase ${currentRoute === "/crew" 
+                    className={`py-8 font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/crew" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>02</span> Crew
                 </Link>
 
                 <Link href="/technology" 
-                    className={`py-8 font-light uppercase ${currentRoute === "/technology" 
+                    className={`py-8 font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/technology" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>03</span> Technology

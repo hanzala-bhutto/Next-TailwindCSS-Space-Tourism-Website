@@ -13,6 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         'home': "url('/assets/home/background-home-desktop.jpg')",
+        'destination': "url('/assets/destination/background-destination-desktop.jpg')",
       },
     },
   },

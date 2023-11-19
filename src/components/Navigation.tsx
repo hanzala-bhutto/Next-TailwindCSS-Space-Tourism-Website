@@ -18,8 +18,8 @@ const Navigation = () => {
         {/* </div> */}
         <div className=" bg-slate-700/20 backdrop-blur-xl  w-[85%]">
             <ul className="flex flex-row justify-evenly pl-12 pr-32">
-                <Link href="/" 
-                    className={`py-8 uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/" 
+                <Link href="/home" 
+                    className={`py-8 uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/home" 
                     ? "border-b-4" 
                     : ""}`}>
                     <span className='font-bold mr-[6px]'>00</span> Home

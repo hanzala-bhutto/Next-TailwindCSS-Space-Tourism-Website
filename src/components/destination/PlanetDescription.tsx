@@ -1,20 +1,6 @@
 import Image from "next/image";
 import {barlowCond, bellefair} from "@/fonts/fonts";
-
-
-interface Planet {
-    index: number;
-    name: string;
-    description: string;
-    distance: string;
-    travelTime: string;
-    image: string;
-}
-
-interface PlanetProps {
-    planet: Planet;
-    changeTab: (index: number) => void;
-}
+import { PlanetProps } from "@/types";
 
 export const PlanetDescription : React.FC<PlanetProps> = ({planet, changeTab}) => {
 

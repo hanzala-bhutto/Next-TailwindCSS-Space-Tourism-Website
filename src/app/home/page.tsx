@@ -1,4 +1,5 @@
 import { bellefair } from "@/fonts/fonts"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
               <p className=" text-spaceBlue">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
             </article>
             <article className="flex items-end">
-              <button className={`text-slate-800 font-bellefair text-3xl uppercase p-[4.2rem] py-28 rounded-full bg-white hover:animate-pulse focus:animate-pulse ${bellefair.className}`}>Explore</button>
+              <Link href="/destination"><button className={`text-slate-800 font-bellefair text-3xl uppercase p-[4.2rem] py-28 rounded-full bg-white hover:animate-pulse focus:animate-pulse ${bellefair.className}`}>Explore</button>></Link>
             </article>
           </section>
         </div>

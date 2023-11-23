@@ -6,7 +6,7 @@ export default function HomeLayout({
 }) {
   return (
         <>
-        <main className='min-h-screen flex flex-col items-center justify-between pl-40 pr-48 bg-home bg-cover text-white'>
+        <main className='min-h-screen flex flex-col items-center justify-between bg-homeMobile pl-2 pr-2 md:pl-40 md:pr-48 md:bg-home bg-cover text-white'>
           {children}
         </main>
         </>

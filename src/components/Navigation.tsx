@@ -3,12 +3,17 @@ import { usePathname } from 'next/navigation';
 import { barlowCond } from '@/fonts/fonts';
 import Image from "next/image";
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Navigation = () => {
 
     const currentRoute = usePathname();
 
+    const [isOpen, setIsOpen] = useState(true);
+
     return (
+        <>
+        <div className='hidden md:block'>
         <section className={`fixed top-10 pl-14 w-full flex flex-row justify-between items-center text-white text-xl ${barlowCond.className}`}>
         {/* <div className=""> */}
             <Image src="./assets/shared/logo.svg" alt="logo" width={80} height={40} />
@@ -47,7 +52,59 @@ const Navigation = () => {
                 </Link>
             </ul>
         </div>
+        </section>        
+        </div>
+        
+        <div className='md:hidden'>
+        <section className={`pl-2 pr-2 fixed top-4 w-full flex flex-row justify-between items-center text-white text-md ${barlowCond.className}`}>
+        {/* <div className=""> */}
+            <Image src="./assets/shared/logo.svg" alt="logo" width={40} height={40} />
+
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256"
+            color="fill:#000000;">
+            <g fill="#d1dee8" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" className="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path></g></g>
+            </svg>
+        </button>
+
+        <div className={`fixed top-0 right-0 py-8 pl-10 pr-6 bg-slate-700/20 backdrop-blur-xl h-full w-[70%] ${
+        isOpen ? 'animate-open-menu' : '-right-[100%]'
+      }`}>
+            <button onClick={()=> {setIsOpen(false);console.log(isOpen)}} className='float-right text-2xl font-bold mb-10'>X</button>
+            <ul className=" clear-right flex flex-col gap-10 tracking-widest">
+                <Link href="/home" 
+                    className={`uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/home" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>00</span> Home
+                </Link>
+
+                <Link href="/destination" 
+                    className={`font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/destination" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>01</span> Destination
+                </Link>
+
+                <Link href="/crew" 
+                    className={`font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/crew" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>02</span> Crew
+                </Link>
+
+                <Link href="/technology" 
+                    className={`font-light uppercase hover:border-b-4 hover:border-slate-400 ${currentRoute === "/technology" 
+                    ? "border-b-4" 
+                    : ""}`}>
+                    <span className='font-bold mr-[6px]'>03</span> Technology
+                </Link>
+            </ul>
+        </div>
         </section>
+        </div>
+        </>
+
     )
 }
 

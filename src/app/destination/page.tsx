@@ -63,7 +63,7 @@ export default function Destination() {
     return (
         <div className="min-h-screen w-full flex flex-col justify-end gap-8">
           <h1 className={`uppercase text-3xl tracking-widest ${barlowCond.className}`}><span className="font-bold text-gray-600 mr-4">01</span> pick your destination</h1>
-          <section className="w-full flex flex-row pl-20 justify-between items-center mb-14">
+          <section className="w-full flex flex-row pl-20 justify-between gap-8 items-center mb-14">
             <PlanetDescription planet={planet[tab]} changeTab={changeTab}/>
           </section>
         </div>

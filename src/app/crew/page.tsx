@@ -37,7 +37,7 @@ export default function Crew() {
         } 
 
     return (
-        <div className="min-h-screen w-full flex flex-col justify-end gap-8">
+        <div className="lg:min-h-screen w-full flex flex-col justify-end gap-8">
           <h1 className={`uppercase text-xl text-center md:text-3xl lg:text-left tracking-widest ${barlowCond.className}`}><span className="font-bold text-gray-600 mr-4">02</span> meet your crew</h1>
           <section className="w-full flex flex-col-reverse lg:flex-row justify-between items-center mb-14">
             <CrewDescription crew={crew[tab]} changeTab={changeTab}/>

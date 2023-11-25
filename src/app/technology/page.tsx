@@ -45,9 +45,9 @@ export default function Technology() {
         } 
 
     return (
-        <div className="min-h-screen w-full flex flex-col justify-end gap-8">
-          <h1 className={`uppercase text-3xl tracking-widest ${barlowCond.className}`}><span className="font-bold text-gray-600 mr-4">03</span> Space Launch 101</h1>
-          <section className="w-full flex flex-row pl-20 justify-between items-center mb-14">
+        <div className="lg:min-h-screen w-full flex flex-col justify-end gap-8">
+          <h1 className={`uppercase text-xl text-center md:text-3xl lg:text-left tracking-widest ${barlowCond.className}`}><span className="font-bold text-gray-600 mr-4">03</span> Space Launch 101</h1>
+          <section className="w-full flex flex-col-reverse lg:flex-row lg:pl-20 justify-between items-center mb-14">
             <TechDescription technology={technology[tab]} changeTab={changeTab}/>
           </section>
         </div>
